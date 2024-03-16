@@ -15,7 +15,7 @@ class Calculadora:
     
     def divi(self, a, b):
         if b == 0:
-            return "Erro: divisão por zero não é permitida."
+            return "Erro: divisão por zero."
         return a / b
     
     def porcent(self, valor, percentual):
