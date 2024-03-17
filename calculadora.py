@@ -4,27 +4,27 @@ class Calculadora:
     def __init__(self):
         pass
     
-    def soma(self, a, b):
-        return a + b
+    def soma(self, n1:int, n2:int):
+        return n1 + n2
     
-    def sub(self, a, b):
-        return a - b
+    def sub(self, n1:int, n2:int):
+        return n1 - n2
     
-    def mult(self, a, b):
-        return a * b
+    def mult(self, n1:int, n2:int):
+        return n1 * n2
     
-    def divi(self, a, b):
-        if b == 0:
+    def divi(self, n1:int, n2:int):
+        if n2 == 0:
             return "Erro: divisão por zero."
-        return a / b
+        return n1 / n2
     
-    def porcent(self, valor, percentual):
+    def porcent(self, valor:int, percentual:int):
         return (valor * percentual) / 100
     
-    def raiz_quadrada(self, a):
-        return math.sqrt(a)
+    def raiz_quadrada(self, n1:int):
+        return math.sqrt(n1)
     
-    def potenciacao(self, base, expoente):
+    def potenciacao(self, base:int, expoente:int):
         return base ** expoente
 
 
