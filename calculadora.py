@@ -3,28 +3,33 @@ import math
 class Calculadora:
     def __init__(self):
         pass
+
+    def verificar(self, numero1, numero2):
+        if (numero1 or numero2) == str:
+            print("Falha na Matrix")
+            
+
+    def somar(self, numero1:int, numero2:int)->int:
+        return numero1 + numero2
     
-    def soma(self, n1:int, n2:int):
-        return n1 + n2
+    def subitrair(self, numero1:int, numero2:int)->int:
+        return numero1 - numero2
     
-    def sub(self, n1:int, n2:int):
-        return n1 - n2
+    def multiplicar(self, numero1:int, numero2:int)->int:
+        return numero1 * numero2
     
-    def mult(self, n1:int, n2:int):
-        return n1 * n2
-    
-    def divi(self, n1:int, n2:int):
-        if n2 == 0 or n1 == 0:
+    def dividir(self, numero1:int, numero2:int)->float:
+        if numero2 == 0 or numero1 == 0:
             return "Erro: divisão por zero."
-        return n1 / n2
+        return numero1 / numero2
     
-    def porcent(self, valor:int, percentual:int):
+    def porcentagem(self, valor:int, percentual:float)->float:
         return (valor * percentual) / 100
     
-    def raiz_quadrada(self, n1:int):
+    def raiz_quadrada(self, n1:int)->float:
         return math.sqrt(n1)
     
-    def potenciacao(self, base:int, expoente:int):
+    def potenciacao(self, base:int, expoente:int)->int:
         return base ** expoente
 
 operacao = 1
@@ -37,38 +42,32 @@ while operacao != 0:
         print("Fim do programa")
         break
     elif operacao == '+':
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        resultado = calc.soma(num1, num2)
-        print(resultado)
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+        print(calc.somar(numero1, numero2))
+        
     elif operacao == '-':
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        resultado = calc.sub(num1, num2)
-        print(resultado)
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+        print(calc.subitrair(numero1, numero2))
     elif operacao == '*':
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        resultado = calc.mult(num1, num2)
-        print(resultado)
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+        print(calc.multiplicar(numero1, numero2))
     elif operacao == '/':
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        resultado = calc.divi(num1, num2)
-        print(resultado)
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+        print(calc.dividir(numero1, numero2))
     elif operacao == '%':
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        resultado = calc.porcent(num1, num2)
-        print(resultado)
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+        print(calc.porcentagem(numero1, numero2))
     elif operacao == 'v':
-        num1 = float(input("Digite o primeiro número: "))
-        resultado = calc.raiz_quadrada(num1)
-        print(resultado)
+        numero1 = float(input("Digite o primeiro número: "))
+        print(calc.raiz_quadrada(numero1))
     elif operacao == '^':
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        resultado = calc.potenciacao(num1, num2)
-        print(resultado)
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+        print(calc.potenciacao(numero1, numero2))
     else:
         print("Operação inválida!")
